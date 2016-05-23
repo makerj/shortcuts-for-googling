@@ -37,6 +37,6 @@ keyRouter[65] = function (onAKey) {
 };
 
 document.addEventListener('keyup', function (e) {
-    if (document.activeElement.nodeName === 'input') return;
+    if ((''+document.activeElement.nodeName).toLowerCase() === 'input') return;
     keyRouter[e.keyCode](e);
 });
